@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Star Wars RPG</title>
+	<title>Star Wars: Collect the Force</title>
 	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- Reset CSS -->
-	<link rel="stylesheet" href="assets/reset.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
 
 	<!-- Style CSS -->
-	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 
-	<!--Google Font - Inconsolata -->
-	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<!-- Google Font Inconsolata -->
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
 	<!--jQuery Loaded -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -26,69 +26,103 @@
 	
 		<!-- Title Header -->
 		<div class="row">
-			<div class="col-lg-8"></div>
-			<div class="col-lg-4">
-				<h1>Star Wars RPG!</h1>
+			<div class="jumbotron txt">
+ 				<h1>Star Wars: Collect the Force</h1>
+ 				<br>
+ 				<p>Use the force to match the random value, without going above the value.</p>
+ 				<p>REMEMBER: For each new game, each character will yield different force values.</p>
+ 				<p>Click any character to get started...</p>
 			</div>
 		</div>
 	
 		<!-- Game Content -->
+
 		<div class="row">
-			<div class="col-lg-8">
-				<div id="">
-					<h2>Your Character</h2>
-				</div>
-					<div class="rey">
-						<p>Rey</p>
-						<img src="assets/images/Rey.jpg" alt="Rey" width="200" height="100">
-						<p>150</p>
-					</div>
-					<div class="finn">
-						<p>Finn</p>
-						<img src="assets/images/Finn.png" alt="Finn" width="200" height="100">
-						<p>100</p>
-					</div>
-					<div class="poe">
-						<p>Poe</p>
-						<img src="assets/images/Poe.jpg" alt="Poe" width="200" height="100">
-						<p>120</p>
-					</div>
-					<div class="kylo">
-						<p>Kylo Ren</p>
-						<img src="assets/images/Kylo.jpg" alt="Kylo" width="200" height="100">
-						<p>180</p>
-					</div>
-				<div id="">
-					<h2>Enemies Available to Attack</h2>
-				</div>
-				<div id="">
-					<button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-minus-sign"></span> Attack</button>
-				</div>
-				<div id="">
-					<h2>Defender</h2>
+
+		<!-- Random Number Generated for User to Match -->
+
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+  					<div class="panel-body txt">
+    				<p>Match this number:</p>
+    				<h2>
+    					<span id="matchNumber"></span>
+    				</h2>
+  					</div>
 				</div>
 			</div>
-			<div class="col-lg-4"></div>
+
+		<!-- Win/Loss Counters -->
+
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+  					<div class="panel-body txt">
+    					<p>Wins: <span id="winCounter"></span></p>
+    					<p>Losses: <span id="lossCounter"></span></p>
+  					</div>
+				</div>
+			</div>
 		</div>
+
+		<!-- Character Buttons -->
+
+		<div class="row">
+			<div class="col-lg-12">
+					<div>
+							<button class="btn btn-default">
+								<div class="txt bttn" id="rey">
+									<p>Rey</p>
+									<img src="assets/images/Rey.jpg" alt="Rey" width="200" height="100">
+								</div>
+							</button>
+								
+							<button class="btn btn-default">
+								<div class="txt bttn" id="finn">
+									<p>Finn</p>
+									<img src="assets/images/Finn.png" alt="Finn" width="200" height="100">
+								</div>
+							</button>
+							
+							<button class="btn btn-default">
+								<div class="txt bttn" id="poe">
+									<p>Poe</p>
+									<img src="assets/images/Poe.jpg" alt="Poe" width="200" height="100">
+								</div>
+							</button>
+						
+							<button class="btn btn-default">
+								<div class="txt bttn" id="kylo">
+									<p>Kylo Ren</p>
+									<img src="assets/images/Kylo.jpg" alt="Kylo" width="200" height="100">
+								</div>
+							</button>
+					</div>
+			</div>
+		</div>
+
+		<!-- Total Score Counter -->
+
+		<div class="row top-buffer">
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+  					<div class="panel-body txt">
+    				<p>Your total score is:</p>
+  					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+  					<div class="panel-body txt">
+    					<span id="totalScore"></span>
+  					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-<script type="text/javascript">
 
-//jQuery function, wrapping the entire script
-	$(document).ready (function(){
-	
-		//Character Buttons
-		$('input[type="image"]').click (function(){
-			alert("HELLO");
-		});
 
-		$().click(function(){
-			$().css("background-color", "red");
-		});
-
-		
-		
-	});
-</script>
+<script src="assets/javascript/game.js"></script>
 
 </body>
 </html>

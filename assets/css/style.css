@@ -1,8 +1,11 @@
-p:{
+.bttn{
 	text-align:center;
 }
 
-.rey,.finn,.poe,.kylo{
-	padding:20px;
-	background-color: white;
+.top-buffer{
+	margin-top: 20px;
+}
+
+.txt{
+	font-family: 'Inconsolata';
 }
