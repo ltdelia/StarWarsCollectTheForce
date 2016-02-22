@@ -75,7 +75,7 @@ var totalScore = 0;
 			resetGame();
 		} else if(totalScore  > matchNumber){
 			alert("The force is too strong. You've lost...")
-			lossCounter = lossCounter +1; 
+			lossCounter = lossCounter + 1; 
 			document.getElementById("lossCounter").innerHTML = lossCounter;
 			console.log("Losses: " + lossCounter);
 			resetGame();
