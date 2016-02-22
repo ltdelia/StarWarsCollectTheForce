@@ -6,7 +6,7 @@ var charValue = [];
 var reyValue = 0;
 var finnValue = 0;
 var poeValue = 0;
-var kyloValue = 0;
+var bbValue = 0;
 
 //Game Counters
 var winCounter = 0;
@@ -45,7 +45,7 @@ var totalScore = 0;
 	var reyValue = charValue[0];
 	var finnValue = charValue[1];
 	var poeValue = charValue[2];
-	var kyloValue = charValue[3];
+	var bbValue = charValue[3];
 
 	//Generates a random number to match
 	var matchNumber=Math.floor(Math.random()*(120-19+1) + 19);
@@ -62,7 +62,7 @@ var totalScore = 0;
 		reyValue = charValue[0];
 		finnValue = charValue[1];
 		poeValue = charValue[2];
-		kyloValue = charValue[3];
+		bbValue = charValue[3];
 	}
 
 	//Round Complete Function
@@ -105,10 +105,10 @@ var totalScore = 0;
 		roundClear();
 	});	
 	
-	$('#kylo').click (function(){
-		totalScore = totalScore + kyloValue;
+	$('#bb8').click (function(){
+		totalScore = totalScore + bbValue;
 		document.getElementById("totalScore").innerHTML = totalScore;
-		console.log("Kylo makes it: " + totalScore);
+		console.log("BB-8 makes it: " + totalScore);
 		roundClear();
 	});	
 
