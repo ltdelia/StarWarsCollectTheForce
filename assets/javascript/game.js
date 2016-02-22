@@ -49,57 +49,79 @@ var totalScore = 0;
 
 	//Generates a random number to match
 	var matchNumber=Math.floor(Math.random()*(120-19+1) + 19);
-	
-	//Character Buttons
-	
-	console.log("This is the current score: " + totalScore);
 	console.log("Match this number: " + matchNumber);
-	
+
+	//Reset Function
+	function resetGame(){
+		totalScore = 0;
+		document.getElementById("totalScore").innerHTML = totalScore;
+		matchNumber=Math.floor(Math.random()*(120-19+1) + 19);
+		document.getElementById("matchNumber").innerHTML = matchNumber;
+		shuffle(charValue);
+		console.log(charValue);
+		reyValue = charValue[0];
+		finnValue = charValue[1];
+		poeValue = charValue[2];
+		kyloValue = charValue[3];
+	}
+
+	//Round Complete Function
+	function roundClear(){
+		if(totalScore == matchNumber){
+			alert("The force is strong with you. You've won!")
+			winCounter = winCounter + 1;
+			document.getElementById("winCounter").innerHTML = winCounter;
+			console.log("Wins: " + winCounter);
+			resetGame();
+		} else if(totalScore  > matchNumber){
+			alert("The force is too strong. You've lost...")
+			lossCounter = lossCounter +1; 
+			document.getElementById("lossCounter").innerHTML = lossCounter;
+			console.log("Losses: " + lossCounter);
+			resetGame();
+		}
+	}
+
+	//Character Buttons
+
 	$('#rey').click (function(){
 		totalScore = totalScore + reyValue;
-		console.log("Rey makes it: " + totalScore);
-		if(totalScore == matchNumber){
-			alert("The force is strong with you. You've won!");
-			winCounter = winCounter + 1;
-			console.log("Wins: " + winCounter);
-		}
+		document.getElementById("totalScore").innerHTML = totalScore;
+		console.log("Rey makes it: " + totalScore);	
+		roundClear();
 	});	
 	
 	$('#finn').click (function(){
 		totalScore = totalScore + finnValue;
+		document.getElementById("totalScore").innerHTML = totalScore;
 		console.log("Finn makes it: " + totalScore);
-		if(totalScore == matchNumber){
-			alert("The force is strong with you. You've won!");
-			winCounter = winCounter + 1;
-			console.log("Wins: " + winCounter);
-		}
+		roundClear();
 	});	
 	
 	$('#poe').click (function(){
 		totalScore = totalScore + poeValue;
+		document.getElementById("totalScore").innerHTML = totalScore;
 		console.log("Poe makes it: " + totalScore);
-		if(totalScore == matchNumber){
-			alert("The force is strong with you. You've won!");
-			winCounter = winCounter + 1;
-			console.log("Wins: " + winCounter);
-		}
+		roundClear();
 	});	
 	
 	$('#kylo').click (function(){
 		totalScore = totalScore + kyloValue;
+		document.getElementById("totalScore").innerHTML = totalScore;
 		console.log("Kylo makes it: " + totalScore);
-		if(totalScore == matchNumber){
-			alert("The force is strong with you. You've won!");
-			winCounter = winCounter + 1;
-			console.log("Wins: " + winCounter);
-		}
+		roundClear();
 	});	
-	
 
-		
+
+	
+	//Change HTML to reflect round conditions
+	document.getElementById("matchNumber").innerHTML = matchNumber;
+	document.getElementById("winCounter").innerHTML = winCounter;
+	document.getElementById("lossCounter").innerHTML = lossCounter;
+	document.getElementById("totalScore").innerHTML = totalScore;	
 
 //MAIN PROCESS
 //====================================================================================================================================	
-		
+
 	});
 
