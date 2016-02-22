@@ -120,6 +120,11 @@ var totalScore = 0;
 	document.getElementById("lossCounter").innerHTML = lossCounter;
 	document.getElementById("totalScore").innerHTML = totalScore;	
 
+
+	//Change HTML to make number to match and total score larger
+	document.getElementById("matchNumber").style.fontSize = "x-large";
+	document.getElementById("totalScore").style.fontSize = "x-large";
+
 //MAIN PROCESS
 //====================================================================================================================================	
 

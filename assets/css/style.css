@@ -1,3 +1,8 @@
+.jumbotron{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
 .spcs{
 	margin-right:55px;
 }
@@ -13,3 +18,8 @@
 .txt{
 	font-family: 'Inconsolata';
 }
+
+.bodytxt{
+	font-size: 18px;
+}
+
