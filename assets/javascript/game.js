@@ -1,23 +1,16 @@
-//GLOBAL VARIABLES
-//====================================================================================================================================
-
-//Character Values at start -- these are placeholders
-var charValue = [];
-var reyValue = 0;
-var finnValue = 0;
-var poeValue = 0;
-var bbValue = 0;
-
-//Game Counters
-var winCounter = 0;
-var lossCounter = 0;
-var totalScore = 0;
-
-//FUNCTIONS
-//====================================================================================================================================
-
 //jQuery function, wrapping the entire script
 	$(document).ready (function(){
+	//Character Values at start -- these are placeholders
+	var charValue = [];
+	var reyValue = 0;
+	var finnValue = 0;
+	var poeValue = 0;
+	var bbValue = 0;
+
+	//Game Counters
+	var winCounter = 0;
+	var lossCounter = 0;
+	var totalScore = 0;
 	
 	//Loop populates charValue array with values from 1 to 12
 	for (var i = 1; i <= 12; i++){
