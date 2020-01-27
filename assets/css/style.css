@@ -23,3 +23,12 @@
 	font-size: 18px;
 }
 
+/* counters */
+
+#matchNumber{
+	font-size: x-large;
+}
+
+#totalScore{
+	font-size: x-large;
+}
