@@ -30,14 +30,18 @@
   padding: 15px 15px 7.5px 15px;
 }
 
-.character-buttons-row .col-lg-12 {
+.character-buttons-row .character-button-container {
   text-align: center;
+}
+
+.character-button {
+  padding: 0;
 }
 
 /* utils */
 
 .spcs {
-  margin: 0 27.5px;
+  margin: 0 13.25px;
 }
 
 .bttn {
