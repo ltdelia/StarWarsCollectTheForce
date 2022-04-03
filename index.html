@@ -1,117 +1,146 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Star Wars: Collect the Force</title>
-	
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <head>
+    <title>Star Wars: Collect the Force</title>
 
-	<!-- Style CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
 
-	<!-- Google Font Inconsolata -->
-	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-	<!--jQuery Loaded -->
-	<script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Google Font Inconsolata -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-</head>
-<body background="assets/images/background.jpg">
-	
-	<!-- Entire Bootstrap Grid -->
-	<div class="container">
-	
-		<!-- Title Header -->
-		<div class="row">
-			<div class="jumbotron txt">
- 				<h1>Star Wars: Collect the Force</h1>
- 				<br>
- 				<p>Use the force to match the random value, without going above the value.</p>
- 				<p>REMEMBER: For each new game, each character will yield different force values.</p>
- 				<p>Click any character to get started...</p>
-			</div>
-		</div>
-	
-		<!-- Game Content -->
+    <!--jQuery Loaded -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+  <body background="assets/images/background.jpg">
+    <!-- Entire Bootstrap Grid -->
+    <div class="container">
+      <div class="game-container">
+        <!-- Title Header -->
+        <div class="row header-row">
+          <div class="jumbotron txt">
+            <h1>Star Wars: Collect the Force</h1>
+            <br />
+            <p>
+              Use the force to match the random value, without going above the
+              value.
+            </p>
+            <p>
+              REMEMBER: For each new game, each character will yield different
+              force values.
+            </p>
+            <p>Click any character to get started...</p>
+          </div>
+        </div>
 
-		<div class="row">
+        <!-- Game Content -->
 
-		<!-- Random Number Generated for User to Match -->
+        <div class="row counter-row">
+          <!-- Random Number Generated for User to Match -->
 
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-  					<div class="panel-body txt bodytxt">
-    				<p>Match this value:
-    					<span id="matchNumber"></span>
-    				</p>
-  					</div>
-				</div>
-			</div>
+          <div class="col-lg-6">
+            <div class="panel panel-default panel-match">
+              <div class="panel-body txt bodytxt">
+                <p>
+                  Match this value:
+                  <span id="matchNumber"></span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-		<!-- Win/Loss Counters -->
+          <!-- Win/Loss Counters -->
 
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-  					<div class="panel-body txt bodytxt">
-    					<p>Wins: <span id="winCounter"></span></p>
-    					<p>Losses: <span id="lossCounter"></span></p>
-  					</div>
-				</div>
-			</div>
-		</div>
+          <div class="col-lg-6">
+            <div class="panel panel-default panel-win-loss">
+              <div class="panel-body txt bodytxt">
+                <p>Wins: <span id="winCounter"></span></p>
+                <p>Losses: <span id="lossCounter"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-		<!-- Character Buttons -->
+        <!-- Character Buttons -->
 
-		<div class="row">
-			<div class="col-lg-12">
-					<div>
-							<button class="btn btn-default spcs">
-								<div class="txt bttn bodytxt" id="rey">
-									<p>Rey</p>
-									<img src="assets/images/Rey.jpg" alt="Rey" width="200" height="100">
-								</div>
-							</button>
-								
-							<button class="btn btn-default spcs">
-								<div class="txt bttn bodytxt" id="finn">
-									<p>Finn</p>
-									<img src="assets/images/Finn.png" alt="Finn" width="200" height="100">
-								</div>
-							</button>
-							
-							<button class="btn btn-default spcs">
-								<div class="txt bttn bodytxt" id="poe">
-									<p>Poe</p>
-									<img src="assets/images/Poe.jpg" alt="Poe" width="200" height="100">
-								</div>
-							</button>
-						
-							<button class="btn btn-default spcs">
-								<div class="txt bttn bodytxt" id="bb8">
-									<p>BB-8</p>
-									<img src="assets/images/bb8.jpg" alt="BB-8" width="200" height="100">
-								</div>
-							</button>
-					</div>
-			</div>
-		</div>
+        <div class="row character-buttons-row">
+          <div class="col-lg-12">
+            <button class="btn btn-default spcs">
+              <div class="txt bttn bodytxt" id="rey">
+                <p>Rey</p>
+                <img
+                  src="assets/images/Rey.jpg"
+                  alt="Rey"
+                  width="200"
+                  height="100"
+                />
+              </div>
+            </button>
 
-		<!-- Total Score Counter -->
+            <button class="btn btn-default spcs">
+              <div class="txt bttn bodytxt" id="finn">
+                <p>Finn</p>
+                <img
+                  src="assets/images/Finn.png"
+                  alt="Finn"
+                  width="200"
+                  height="100"
+                />
+              </div>
+            </button>
 
-		<div class="row top-buffer">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-  					<div class="panel-body txt bodytxt">
-    				<p>Your total score is: <span id="totalScore"></span></p>
-  					</div>
-				</div>
-			</div>
-		</div>
+            <button class="btn btn-default spcs">
+              <div class="txt bttn bodytxt" id="poe">
+                <p>Poe</p>
+                <img
+                  src="assets/images/Poe.jpg"
+                  alt="Poe"
+                  width="200"
+                  height="100"
+                />
+              </div>
+            </button>
 
-	</div>
+            <button class="btn btn-default spcs">
+              <div class="txt bttn bodytxt" id="bb8">
+                <p>BB-8</p>
+                <img
+                  src="assets/images/bb8.jpg"
+                  alt="BB-8"
+                  width="200"
+                  height="100"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
 
+        <!-- Total Score Counter -->
 
-<script src="assets/javascript/game.js"></script>
+        <div class="row top-buffer total-score-row">
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-body txt bodytxt">
+                <p>Your total score is: <span id="totalScore"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <script src="assets/js/game.js"></script>
+  </body>
 </html>

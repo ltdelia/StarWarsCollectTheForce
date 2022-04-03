@@ -1,34 +1,67 @@
-.jumbotron{
-	padding-top:15px;
-	padding-bottom:15px;
+/* layout */
+
+.container {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.spcs{
-	margin-right:55px;
+.game-container {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.bttn{
-	text-align:center;
+/* header */
+.jumbotron {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.top-buffer{
-	margin-top: 20px;
+/* modules */
+
+.panel-match .panel-body {
+  padding: 25px 15px;
 }
 
-.txt{
-	font-family: 'Inconsolata';
+.panel-win-loss .panel-body {
+  padding: 15px 15px 7.5px 15px;
 }
 
-.bodytxt{
-	font-size: 18px;
+.character-buttons-row .col-lg-12 {
+  text-align: center;
+}
+
+/* utils */
+
+.spcs {
+  margin: 0 27.5px;
+}
+
+.bttn {
+  text-align: center;
+}
+
+.top-buffer {
+  margin-top: 20px;
+}
+
+.txt {
+  font-family: "Inconsolata";
+}
+
+.bodytxt {
+  font-size: 18px;
 }
 
 /* counters */
 
-#matchNumber{
-	font-size: x-large;
+#matchNumber {
+  font-size: x-large;
 }
 
-#totalScore{
-	font-size: x-large;
+#totalScore {
+  font-size: x-large;
 }
